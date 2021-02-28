@@ -1,0 +1,22 @@
+Find project gothub. 
+1. Install  java8, default-jdk, maven , git.
+
+2. Clone repository
+git clone https://github.com/tongueroo/demo-java.git 
+
+3. package collection Maven
+mvn package (сбор проекта)
+ls /var/lib/tomcat9/webapps
+cd /home/ubuntu/demo-java/target
+
+4. Copy *.war app to Tomcat
+cp -p /home/ubuntu/demo-java/target/demo.war /var/lib/tomcat9/webapps/ 
+
+systemctl restart tomcat9
+
+netstat
+tcp6   0  0 :::8080 :::*    LISTEN      20399/java
+
+
+5. Web Browser
+http://35.223.2.48:8080/demo/
